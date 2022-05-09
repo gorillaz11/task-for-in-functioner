@@ -41,20 +41,8 @@ while True:
         new_tasks=input("enter new tasks title!!:")
         tasks[index]=new_tasks
     if option == 5:
-        index=int(input("enter task swap position!!:"))-1
-
-        def swapPositions(tasks, pos1, pos2):
-            first_ele=tasks.pop(pos1)
-            second_ele=tasks.pop(pos2-1)
-            tasks.insert(pos1, second_ele) 
-            tasks.insert(pos2, first_ele) 
-            index=pos1,pos2
-            pos1=int(input("input position 1"))-1
-            pos2=int(input("input position 2"))-1
-
-            tasks[index]=new_tasks
-
-            return tasks
-            
+        pos1=int(input("first position:"))
+        pos2=int(input("second position:"))
+        tasks[pos2],tasks[pos1]=tasks[pos1],tasks[pos2]
     if option==0:
         break     
